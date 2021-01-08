@@ -14,6 +14,7 @@
       <PostCards v-for="post in resultQuery" :key="post.id" :post="post" />
     </div>
     <jw-pagination
+      v-if="!searchQuery"
       :items="posts"
       @changePage="onChangePage"
       class="mt-5"
